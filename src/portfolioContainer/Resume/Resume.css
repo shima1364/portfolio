@@ -6,6 +6,7 @@
     min-height: fit-content;
     margin: 120px 0;
 }
+
 .resume-card{
     display: flex;
     height: 360px;
@@ -19,7 +20,7 @@
     width: 320px;
 }
 
-.resume-bullets-details {
+.resume-bullet-details {
     flex-grow: 1;
     width: 600px;
     overflow: hidden;

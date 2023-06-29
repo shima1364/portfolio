@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading";
-import './Resume.css';
+import "./Resume.css";
 
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
-  const [carouselOffSetStyle, setCarousalOffSetStyle]= useState({});
+  const [carouselOffSetStyle, setCarousalOffSetStyle] = useState({});
   const ResumeHeading = (props) => (
     <div className="resume-heading">
       <div className="resume-main-heading">
@@ -96,52 +96,56 @@ export default function Resume(props) {
       </div>
     </>,
   ];
-  const handelCarousal =(index)=>{
-    let offsetHeight =360;
-    let newCarousalOffset ={
-      style: {transform: "translateY("+ index * offsetHeight * -1+"px)"}
+  const handelCarousal = (index) => {
+    let offsetHeight = 360;
+    let newCarousalOffset = {
+      style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
     };
-    setCarousalOffSetStyle(newCarousalOffset)
+    setCarousalOffSetStyle(newCarousalOffset);
     setSelectedBulletIndex(index);
   };
 
-  const getBullets= ()=>{
-    return resumeBullets.map((bullet, index)=>(
-      <div onClick={()=>handelCarousal(index)} className={index=== selectedBulletIndex ? 'bullet selected-bullet' :'bullet'}
-      key={index}>
-        <img className="bullet-logo"
-        src={require(`../../assets/Resume/${bullet.logoSrc}`)}/>
-
+  const getBullets = () => {
+    return resumeBullets.map((bullet, index) => (
+      <div
+        onClick={() => handelCarousal(index)}
+        className={
+          index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"
+        }
+        key={index}
+      >
+        <img
+          className="bullet-logo"
+          src={require(`../../assets/Resume/${bullet.logoSrc}`)}
+        />
       </div>
-    ))
-  }
-  const getResumeScreen= ()=>{
-    return(
+    ));
+  };
+  const getResumeScreen = () => {
+    return (
       <div
         style={carouselOffSetStyle.style}
         className="resume-detailes-carousal"
-        >
-          {resumeDetails.map((ResumeDetail)=>ResumeDetail )}
+      >
+        {resumeDetails.map((ResumeDetail) => ResumeDetail)}
       </div>
-    )
-  }
+    );
+  };
 
-  
   return (
-    <div className="resume-container">
+    <div className="resume-container screen-container">
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My Formal Bio"} />
-        <div className="resume-bullets">
-          <div className="bullet-container">
-            <div className="bullet-icons"></div>
-            <div className="bullets">{getBullets()}</div>
+        <div className="resume-card">
+          <div className="resume-bullets">
+            <div className="bullet-container">
+              <div className="bullet-icons"></div>
+              <div className="bullets">{getBullets()}</div>
+            </div>
           </div>
-
+          <div className="resume-bullet-details">{getResumeScreen()}</div>
         </div>
-        <div className="resume-buller-details">{getResumeScreen()}</div>
       </div>
     </div>
   );
 }
-
-
