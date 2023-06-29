@@ -14,7 +14,7 @@
     
 }
 
-.resume-bullets{
+.resume-bullets {
     height: 100%;
     box-shadow: 15px 0 9px -15px #1f2235;
     width: 320px;
@@ -77,4 +77,15 @@
     position: absolute;
  }
 
+ .selected-bullet {
+    color: white;
+    width: 100%; 
+ }
 
+.resume-screen-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 360px;
+    width: 100%;
+}
