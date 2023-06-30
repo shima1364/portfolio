@@ -10,14 +10,14 @@ export default function Resume(props) {
       <div className="resume-main-heading">
         <div className="heading-bullet">
           <span>{props.heading ? props.heading : ""}</span>
-          {props.fromDate && props.toDate ? (
+          {/* {props.fromDate && props.toDate ? (
             <div className="heading-date">
               {props.fromDate + "_" + props.toDate}
             </div>
           ) : (
             <div></div>
-          )}
-        </div>
+          )} */}
+        </div>  
         <div className="resume-sub-heading">
           <span>{props.subHeading ? props.subHeading : ""}</span>
         </div>
@@ -46,7 +46,7 @@ export default function Resume(props) {
   ];
 
   const resumeDetails = [
-    <>
+    
       <div className="resume-screen-container" key="education">
         <ResumeHeading
           heading={"University of Tehran, Tehran, Iran"}
@@ -62,7 +62,7 @@ export default function Resume(props) {
           heading={"Sematec IT professional training center, Tehran, Iran"}
           subHeading={"Graduation Certificate for Front End Web Development"}
         />
-      </div>
+      </div>,
       <div className="resume-screen-container" key="work-experience">
         <ResumeHeading
           heading={"Novin Ebtekar Co., Tehran, Iran"}
@@ -76,25 +76,27 @@ export default function Resume(props) {
           heading={"Hakim Chemical Process CO., Qazvin, Iran"}
           subHeading={"Quality Control Inspector"}
         />
-      </div>
+      </div>,
       <div
         className="resume-screen-container programming-skills-container"
-        key="programming-skills"
-      >
+        key="programming-skills">
+      
         {programmingSkillDetails.map((skill, index) => (
           <div className="skill-parent" key={index}>
-            <div className="heading-bullet"></div>
+            <div className="heading-bullet"/>
             <span>{skill.skill}</span>
             <div className="skill-percentage">
               <div
                 style={{ width: skill.ratingPercentage + "%" }}
                 className="active-percentage"
-              ></div>
+              >
+                
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </>,
+  
   ];
   const handelCarousal = (index) => {
     let offsetHeight = 360;
@@ -139,11 +141,11 @@ export default function Resume(props) {
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">
-              <div className="bullet-icons"></div>
+              <div className="bullet-icons"/>
               <div className="bullets">{getBullets()}</div>
             </div>
           </div>
-          <div className="resume-bullet-details">{getResumeScreen()}</div>
+          <div className="resume-bullet-detailes">{getResumeScreen()}</div>
         </div>
       </div>
     </div>
