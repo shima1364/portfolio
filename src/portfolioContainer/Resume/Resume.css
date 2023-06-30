@@ -90,14 +90,13 @@
     justify-content: space-evenly;
     height: 360px;
     width: 100%;
-    overflow: scroll;
 }
 
-.resume-heading{
+.resume-heading {
     display: flex;
     flex-direction: column;
 }
-.resume-main-heading{
+.resume-main-heading {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -105,7 +104,7 @@
 
 .heading-bullet{
     position: absolute;
-    left:30px;
+    left:-30px;
     height: 15px;
     width: 15px;
     top: 5px;
