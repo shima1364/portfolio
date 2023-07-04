@@ -159,7 +159,11 @@ background-color: orangered;
 
 .resume-content{}
 
-
+.skill-parent span{
+    font-family: 'Poppins Semibold';
+    font-size: 16px;
+    color: orangered;
+}
 
 
 
