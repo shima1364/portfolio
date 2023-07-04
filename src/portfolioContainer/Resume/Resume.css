@@ -108,25 +108,54 @@
     width: 15px;
     top: 5px;
     background-color:orangered;
+    border-radius: 50%;
 
 }
 .resume-sub-heading {
+    font-size: 14px;
+    font-family: 'Poppin SemiBold';
+    color: #111;
+    margin: 10px 0 0 0;
 
 }
 
 .resume-heading-description{
+    font-size: 12px;
+    text-align: justify;
 
 }
 
 .programming-skills-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
 
 }
 
-.skill-parent{}
+.skill-parent{display: flex;
+    flex-direction: column;
+    
+    position: relative;
+    width: 50%;
 
-.skill-percentage{}
+}
 
-.active-percentage{}
+.skill-percentage{
+position: relative;
+height: 15px;
+width: 70%;
+background-color: orangered;
+
+}
+
+.skill-percentage .active-percentage{
+    height: 15px;
+    transition: 0.8s ease;
+    position: absolute;
+    background-color: #1f2235;
+}
 
 .resume-content{}
 
